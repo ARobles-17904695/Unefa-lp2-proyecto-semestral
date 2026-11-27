@@ -1,4 +1,3 @@
-
 ```mermaid
 graph TD
     A[Corrupción del registro RIP] --> B(Ausencia de validación de entrada)
@@ -12,7 +11,6 @@ graph TD
     
     D --> D1(Falta de Stack Canaries)
     D --> D2(Deshabilitado ASLR)
-    
     
     graph TD
     TOP((EVENTO PRINCIPAL: \n Corrupción de RIP y \n Control de Flujo)) 
