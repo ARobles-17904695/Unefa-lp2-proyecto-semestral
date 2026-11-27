@@ -1,1 +1,37 @@
+syntax = "proto3";
 
+package bss.billing.v1;
+
+// Opciones de Go (ajustar según el nombre de tu módulo en go.mod)
+option go_package = "lab5_ddd_grpc_y_resiliencia/proto;billing";
+
+service ConvergentBillingService {
+  // RPC Unario de ultra-baja latencia para autorizar y cobrar sesiones de datos
+  rpc AuthorizeAndChargeDataSession (ChargeRequest) returns (ChargeResponse);
+
+  // RPC de Streaming desde el Servidor para telemetría en tiempo real
+  rpc StreamCellTelemetryEvents (TelemetryRequest) returns (stream TelemetryEvent);
+}
+
+message ChargeRequest {
+  string idempotency_key = 1; // UUID para evitar doble cobro
+  string msisdn = 2;          // Número telefónico
+  int64 amount_centavos = 3;  // Montos financieros SIEMPRE en int64
+  string currency = 4;        // Ej. "USD", "EUR"
+}
+
+message ChargeResponse {
+  bool success = 1;
+  string transaction_id = 2;
+  string message = 3;
+}
+
+message TelemetryRequest {
+  string cell_id = 1;
+}
+
+message TelemetryEvent {
+  string event_id = 1;
+  int64 timestamp = 2;
+  string event_type = 3;
+}
