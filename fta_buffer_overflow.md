@@ -21,7 +21,6 @@ graph TD
     G2 -->|OR| G2C(Sección .text con permisos de escritura - NX bit off)
     CAUSA2 -->|AND| C2_1[Atacante envía payload malicioso]
     CAUSA2 -->|AND| C2_2[Payload supera límite del buffer local en Stack]
-
     %% Explicación del flujo lógico hacia RIP
     G1 --> FLUJO1[Los datos sobrescriben variables locales en el Stack]
     FLUJO1 --> FLUJO2[Los datos sobrescriben el 'Saved RBP']
