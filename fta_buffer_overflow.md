@@ -8,7 +8,6 @@ graph TD
     C --> C2(No usar 'strncpy' o 'snprintf')
     D --> D1(Falta de Stack Canaries)
     D --> D2(Deshabilitado ASLR)
-    
     graph TD
     TOP((EVENTO PRINCIPAL: \n Corrupción de RIP y \n Control de Flujo)) 
     TOP -->|AND| G1(Desbordamiento del Buffer)
