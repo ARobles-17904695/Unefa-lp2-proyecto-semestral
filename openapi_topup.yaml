@@ -1,1 +1,76 @@
-
+openapi: 3.1.0
+info:
+  title: API Pasarela Transaccional TelCo/FinTech
+  version: 1.0.0
+  description: Contrato para recargas con idempotencia estricta (RFC 7231).
+paths:
+  /v1/topups:
+    post:
+      summary: Crear una nueva recarga
+      operationId: createTopup
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: UUID v4 para prevenir cobros dobles.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TopupRequest'
+      responses:
+        '201':
+          description: Recarga creada exitosamente (PENDIENTE).
+        '200':
+          description: Recarga ya existente devuelta por idempotencia.
+        '400':
+          description: Datos de entrada inválidos (ej. MSISDN mal formado o monto < 100).
+        '409':
+          description: Conflicto, la Idempotency-Key ya fue usada con otros parámetros.
+        '422':
+          description: Entidad no procesable (Error de negocio).
+  /v1/topups/{transaction_id}:
+    get:
+      summary: Obtener estado de una recarga
+      operationId: getTopup
+      parameters:
+        - in: path
+          name: transaction_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalle de la transacción.
+    put:
+      summary: Actualizar estado de una recarga (Idempotente por naturaleza)
+      operationId: updateTopup
+      parameters:
+        - in: path
+          name: transaction_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Estado actualizado.
+components:
+  schemas:
+    TopupRequest:
+      type: object
+      required:
+        - msisdn
+        - montoCentavos
+      properties:
+        msisdn:
+          type: string
+          description: Número telefónico formato E.164.
+        montoCentavos:
+          type: integer
+          format: int64
+          minimum: 100
+          description: Monto en centavos (entero positivo).
