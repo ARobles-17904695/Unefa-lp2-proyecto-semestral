@@ -1,9 +1,3 @@
-# Árbol de Fallos (FTA) - Corrupción de RIP por Buffer Overflow
-
-Este documento detalla el análisis de fallos (FTA) mediante un diagrama de Ishikawa y un Árbol de Fallos (FTA) lógico para un incidente de seguridad donde un desbordamiento de búfer corrompe el registro `RIP`.
-
-## 1. Diagrama de Ishikawa (Causa-Efecto)
-*Identificando los factores que contribuyen al fallo.*
 
 ```mermaid
 graph TD
