@@ -1,0 +1,407 @@
+{
+    "@context": "https://openvex.dev/ns/v0.2.0",
+    "@id": "https://php.net/sbom/windows/php/8.6.0/vex/e891b1d2-2587-4c3e-935d-ed7f313ab3af",
+    "author": "PHP Group",
+    "timestamp": "2026-11-18T01:11:26Z",
+    "version": 1,
+    "statements": [
+        {
+            "vulnerability": {
+                "name": "CVE-1999-0289"
+            },
+            "timestamp": "2026-11-13T09:07:21Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/apache@2.4.71",
+                    "identifiers": {
+                        "purl": "pkg:generic/apache-httpd@2.4.71"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "The affected legacy Win32 path handling is not present in Apache HTTP Server 2.4 builds."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-1999-0678"
+            },
+            "timestamp": "2026-11-13T09:07:21Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/apache@2.4.71",
+                    "identifiers": {
+                        "purl": "pkg:generic/apache-httpd@2.4.71"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "component_not_present",
+            "impact_statement": "This CVE concerns a Debian default ServerRoot configuration; Debian packaging and configuration are not present in the Windows artifact."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2025-3891"
+            },
+            "timestamp": "2026-11-13T09:07:21Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/apache@2.4.71",
+                    "identifiers": {
+                        "purl": "pkg:generic/apache-httpd@2.4.71"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "component_not_present",
+            "impact_statement": "This CVE affects mod_auth_openidc, which is a separate module and is not included in the Apache dependency artifact."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2017-8806"
+            },
+            "timestamp": "2026-10-13T15:24:04Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libpq@16.15-4",
+                    "identifiers": {
+                        "purl": "pkg:generic/postgresql@16.15"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "component_not_present",
+            "impact_statement": "This CVE affects Debian and Ubuntu postgresql-common cluster scripts, which are not included in the Windows libpq artifact."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-7598"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting upstream username_len bounds checking in src/userauth.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2025-15661"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream bounds-checked parsing for malformed SFTP symlink responses in src/sftp.c and the follow-up SSH_FXP_STATUS response handling fix."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-55199"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream parse-failure handling for SSH_MSG_EXT_INFO extension name and value strings in src/packet.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-55200"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream packet length upper-bound validation in src/transport.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-58050"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream bounds checking for public-key attribute counts in src/publickey.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-58051"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream initialization of newly allocated public-key list entries in src/publickey.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-66032"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream nullification of freed SFTP response data in src/sftp.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-66033"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream runtime bounds checks for AES-GCM block processing in src/openssl.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-66034"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream bounds checking for public-key comment lengths in src/publickey.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-66035"
+            },
+            "timestamp": "2026-11-06T12:27:13Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libssh2@1.11.1-11",
+                    "identifiers": {
+                        "purl": "pkg:generic/libssh2@1.11.1"
+                    }
+                }
+            ],
+            "status": "fixed",
+            "action_statement": "Fixed by backporting the upstream lower-bound validation for Encrypt-then-MAC packet decryption in src/transport.c."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2023-52356"
+            },
+            "timestamp": "2026-11-06T12:27:05Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libtiff@4.7.2",
+                    "identifiers": {
+                        "purl": "pkg:generic/libtiff@4.7.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "The upstream TIFFReadRGBATileExt validation fix is included in libtiff 4.7.2; Grype matches this CVE without a version constraint."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2023-6277"
+            },
+            "timestamp": "2026-11-06T12:27:05Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libtiff@4.7.2",
+                    "identifiers": {
+                        "purl": "pkg:generic/libtiff@4.7.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "The upstream memory-allocation validation fix is included in libtiff 4.7.2; Grype matches this CVE without a version constraint."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-4775"
+            },
+            "timestamp": "2026-11-06T12:27:05Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libtiff@4.7.2",
+                    "identifiers": {
+                        "purl": "pkg:generic/libtiff@4.7.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "The upstream integer-overflow fix is included in libtiff 4.7.2; Grype matches this CVE without a version constraint."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2023-6228"
+            },
+            "timestamp": "2026-11-06T12:27:05Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/libtiff@4.7.2",
+                    "identifiers": {
+                        "purl": "pkg:generic/libtiff@4.7.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "component_not_present",
+            "impact_statement": "This CVE affects the tiffcp command-line utility, which is not included in the Winlibs libtiff dependency artifact."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2014-2285"
+            },
+            "timestamp": "2026-10-02T15:46:08Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/net-snmp@5.9.5.2-2",
+                    "identifiers": {
+                        "purl": "pkg:generic/net-snmp@5.9.5.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "CVE-2014-2285 affects the Perl TrapReceiver handler used by snmptrapd in Net-SNMP 5.7.3.pre3 and earlier. The Winlibs package is based on the final 5.7.3 release and its workflow does not build or ship Perl modules or snmptrapd."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2015-8100"
+            },
+            "timestamp": "2026-10-02T15:46:08Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/net-snmp@5.9.5.2-2",
+                    "identifiers": {
+                        "purl": "pkg:generic/net-snmp@5.9.5.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "CVE-2015-8100 concerns OpenBSD package permissions for snmpd.conf. Winlibs builds Windows binaries and does not install an OpenBSD configuration file or apply OpenBSD file modes."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2019-20892"
+            },
+            "timestamp": "2026-10-02T15:46:08Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/net-snmp@5.9.5.2-2",
+                    "identifiers": {
+                        "purl": "pkg:generic/net-snmp@5.9.5.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "CVE-2019-20892 was introduced by upstream development commit adc9b71 and affected distro packages that incorporated that unreleased change. Winlibs 5.7.3 predates and does not contain that commit, including its explicit securityStateRef cleanup in free_agent_snmp_session and changed USM ownership rules."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2022-44793"
+            },
+            "timestamp": "2026-10-02T15:46:08Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/net-snmp@5.9.5.2-2",
+                    "identifiers": {
+                        "purl": "pkg:generic/net-snmp@5.9.5.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "CVE-2022-44793 affects handle_ipv6IpForwarding in agent/mibgroup/ip-mib/ip_scalars.c. The Winlibs Windows netsnmpmibs build does not compile ip_scalars.c, so the vulnerable handler is absent from snmpd.exe and netsnmp.lib."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2025-68615"
+            },
+            "timestamp": "2026-10-02T15:46:08Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/net-snmp@5.9.5.2-2",
+                    "identifiers": {
+                        "purl": "pkg:generic/net-snmp@5.9.5.2"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "CVE-2025-68615 affects snmptrapd trap handling in apps/snmptrapd_handlers.c. The Winlibs Windows package builds and ships snmpd.exe and netsnmp.lib; it does not build or ship snmptrapd, and the vulnerable snmp_input handler is absent from the library used by PHP."
+        },
+        {
+            "vulnerability": {
+                "name": "CVE-2026-119586"
+            },
+            "timestamp": "2026-11-06T12:12:57Z",
+            "products": [
+                {
+                    "@id": "pkg:php-windows-deps/sqlite3@3.54.1-1",
+                    "identifiers": {
+                        "purl": "pkg:generic/sqlite@3.54.1"
+                    }
+                }
+            ],
+            "status": "not_affected",
+            "justification": "vulnerable_code_not_present",
+            "impact_statement": "The Winlibs build does not define SQLITE_ENABLE_DBPAGE_VTAB, so shell.c sets SQLITE_SHELL_HAVE_RECOVER to 0 and excludes the recovery implementation and .recover command from sqlite3.exe. The SQLite DLL and static library also exclude the shell. Published x86, x64 and ARM64 executables were verified to reject .recover and omit ENABLE_DBPAGE_VTAB from PRAGMA compile_options."
+        }
+    ]
+}
